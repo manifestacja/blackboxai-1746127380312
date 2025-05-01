@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T-Mobile Polska Replica</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Use a clean sans-serif font similar to the site -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Custom scrollbar for modal if needed */
+    .modal-scrollbar {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between bg-pink-700 px-4 py-3">
+    <a href="#" class="flex items-center text-white font-bold text-xl">
+      T-Mobile Logo
+    </a>
+    <nav class="flex items-center space-x-6 text-white">
+      <button aria-label="Cart" class="hover:text-pink-300"><i class="fas fa-shopping-cart fa-lg"></i></button>
+      <button aria-label="User Account" class="hover:text-pink-300"><i class="fas fa-user fa-lg"></i></button>
+      <button aria-label="Support" class="hover:text-pink-300"><i class="fas fa-headset fa-lg"></i></button>
+      <button aria-label="Menu" class="hover:text-pink-300"><i class="fas fa-bars fa-lg"></i></button>
+    </nav>
+  </header>
+
+  <!-- Black Banner -->
+  <section class="bg-black text-white flex justify-between items-center px-6 py-3">
+    <p class="text-sm md:text-base">Kończy Ci się obecna umowa? Przedłuż ją online i zyskaj więcej!</p>
+    <a href="#" class="bg-pink-700 hover:bg-pink-800 text-white font-semibold px-4 py-2 rounded-md transition">Sprawdź</a>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="px-6 py-12 md:py-20 max-w-6xl mx-auto">
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Przywitaj wiosnę z nowym smartfonem!</h1>
+    <p class="text-lg md:text-xl mb-8">Kup wybrany smartfon nawet 550 zł taniej</p>
+    <a href="#" class="inline-block bg-pink-700 hover:bg-pink-800 text-white font-semibold px-6 py-3 rounded-md transition">Sprawdź</a>
+  </section>
+
+  <!-- Cookie Consent Modal -->
+  <div id="cookie-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-lg max-w-3xl w-full p-6 shadow-lg relative">
+      <h2 class="text-xl font-semibold mb-4">Cookies and similar technologies</h2>
+      <div class="modal-scrollbar text-gray-800 text-sm leading-relaxed mb-6">
+        <p>We use cookies and similar technologies on our website to save, read out and process information on your device. In doing so, we enhance your experience, analyze site traffic and show you content and ads that interest you. User profiles are created across websites and devices for this purpose. Our partners use these technologies as well.</p>
+        <p class="mt-4">By selecting “Only required”, you only accept cookies that make our website function properly. “Accept all” means that you allow access to information on your device and the use of all cookies for analytics and marketing purposes by T-Mobile and our partners. Your data might then be transferred to countries outside the European Union where we cannot ensure the same level of data protection as in the EU (see Art. 49 (1) a GDPR). Under “Settings”, you can specify everything in detail and change your consent at any time. Google may use data for ad personalization. <a href="#" class="text-pink-700 underline">See how Google processes your data.</a></p>
+        <p class="mt-4">Find more information in the Privacy Policy and Partner List.</p>
+        <p class="mt-1"><a href="#" class="font-semibold underline mr-4">Privacy Policy</a><a href="#" class="font-semibold underline">Partner List (57)</a></p>
+      </div>
+      <div class="flex justify-end space-x-4">
+        <button id="settings-btn" class="border border-gray-400 rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100 transition">Settings</button>
+        <button id="only-required-btn" class="bg-pink-700 hover:bg-pink-800 text-white rounded-md px-4 py-2 font-semibold transition">Only required</button>
+        <button id="accept-all-btn" class="bg-pink-700 hover:bg-pink-800 text-white rounded-md px-4 py-2 font-semibold transition">Accept all</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple script to close cookie modal on button click
+    document.getElementById('only-required-btn').addEventListener('click', () => {
+      document.getElementById('cookie-modal').style.display = 'none';
+    });
+    document.getElementById('accept-all-btn').addEventListener('click', () => {
+      document.getElementById('cookie-modal').style.display = 'none';
+    });
+    document.getElementById('settings-btn').addEventListener('click', () => {
+      alert('Settings modal not implemented in this replica.');
+    });
+  </script>
+
+</body>
+</html>
